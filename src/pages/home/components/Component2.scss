@@ -1,0 +1,76 @@
+.component2 {
+    margin-top: 44px;
+    width: 100%;
+    padding-bottom: 16px;
+    overflow-x: hidden;
+
+    p {
+        width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+        color: #121212;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .scroll {
+        display: flex;
+        width: 100%;
+        height: 490px;
+        overflow: scroll;
+        overflow-y: hidden;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            max-width: 940px;
+            height: 490px;
+            border-radius: 32px;
+            background-color: rgba(72, 134, 69, 0.1);
+            padding:  60px 45px;
+            overflow: unset;
+
+            p {
+                margin-bottom: -30px;
+                margin-right: auto;
+                width: 820px;
+                padding-right: 640px;
+                text-align: left;
+                border-radius: 32px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+                color: rgba(72, 134, 69, 1);
+            }
+
+            img {  
+                margin-left: auto;
+                margin-top: auto;
+            }
+        }
+
+        div:nth-child(1) {
+            background: #F4F6F6;
+            margin-right: 16px;
+
+            p {
+                color: #a6a9a9;
+            }
+        }
+
+        div:nth-child(2) {
+            background-color: rgba(217, 87, 32, 0.1);
+            margin-right: 16px;
+
+            p {
+                color: rgba(217, 87, 32, 1);
+            }
+        }
+
+
+    }
+}

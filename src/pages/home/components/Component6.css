@@ -1,0 +1,70 @@
+.component6 {
+    padding-top: 180px;
+    width: 1116px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.component6>div {
+    display: flex;
+    flex-direction: column;
+    width: 548px;
+}
+
+.component6 h2 {
+    margin: 0;
+    margin-bottom: 38px;
+    color: #121212;
+    padding-left: 37px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.wrapperStyle {
+    height: 694px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.cardWrapStyle {
+    position: relative;
+    width: 548px;
+    height: 340px;
+    margin-left: -80px;
+}
+
+.cardStyle  {
+    position: absolute;
+    width: 548px;
+    height: 340px;
+    border-radius: 8px;
+    transform-origin: top center;
+    list-style: none;
+    text-align: center
+}
+
+.titleStyle {
+    width: 312px;
+    margin: 30px auto 5px auto;
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.absStyle {
+    background-color: inherit;
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 38px;
+    left: 124px;
+}
