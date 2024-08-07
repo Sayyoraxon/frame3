@@ -18,6 +18,11 @@ const Framer = ({ CARD_COLORS, title }) => {
         setCards(move(cards, from, cards.length - 1));
     };
 
+    const bgc = CARD_COLORS[0].color
+    const bgc1 = CARD_COLORS[1].color
+    const bgc2 = CARD_COLORS[2].color
+
+
     return (
         <div>
             <h2>{title}</h2>
@@ -36,7 +41,8 @@ const Framer = ({ CARD_COLORS, title }) => {
                                 }}
                                 animate={{
                                     top: index * -CARD_OFFSET,
-                                    zIndex: CARD_COLORS.length - index
+                                    zIndex: CARD_COLORS.length - index,
+                                    backgroundColor: index === 0 ? bgc : index === 1 ? bgc1 : bgc2
                                 }}
                                 drag={canDrag ? "y" : false}
                                 dragConstraints={{
