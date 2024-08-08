@@ -14,13 +14,17 @@ const Component2 = () => {
           if (scrollRef.current) {
             if (event.deltaY !== 0) {
               scrollRef.current.scrollLeft += event.deltaY;
-              console.log(scrollRef.current.scrollLeft)
-              if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft !== 1840){
-                event.preventDefault();
-              }
-              
-            }
+                
+            }  
+            if(scrollRef.current.scrollLeft > 0 && scrollRef.current.scrollLeft < 1500){
+            event.preventDefault() 
           }
+
+          }
+
+          
+         
+          
         };
     
         const scrollElement = scrollRef.current;
