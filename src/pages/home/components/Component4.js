@@ -2,14 +2,46 @@ import "./Component4.scss"
 import phone from "../../../assets/img/apple.png"
 import watch from "../../../assets/img/watch.png"
 import arrow from "../../../assets/icons/arrow_up.svg"
+import { useEffect, useRef } from "react"
 
 const Component4 = () => {
+
+    const scrollRef = useRef()
+
+    
+
+    useEffect(() => {
+        const handleWheel = (event) => {
+
+            const width = scrollRef.current.clientWidth
+          if (scrollRef.current) {
+            if (event.deltaY !== 0) {
+              scrollRef.current.scrollLeft += event.deltaY;          
+            }  
+            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < width-400){
+            event.preventDefault() 
+          }
+        }       
+        };
+    
+        const scrollElement = scrollRef.current;
+        if (scrollElement) {
+          scrollElement.addEventListener('wheel', handleWheel);
+        }
+    
+        return () => {
+          if (scrollElement) {
+            scrollElement.removeEventListener('wheel', handleWheel);
+          }
+        };
+      }, []);
+
     return (
         <div className='component4'>
             <h2>
                 Топовые смартфоны
             </h2>
-            <div>
+            <div ref={scrollRef}>
                 <div>
                     <p>Apple</p>
                     <p>

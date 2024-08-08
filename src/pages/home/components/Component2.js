@@ -10,21 +10,16 @@ const Component2 = () => {
     const scrollRef = useRef()
 
     useEffect(() => {
-        const handleWheel = (event: WheelEvent) => {
+        const handleWheel = (event) => {
+            const width = scrollRef.current.clientWidth
           if (scrollRef.current) {
             if (event.deltaY !== 0) {
-              scrollRef.current.scrollLeft += event.deltaY;
-                
+              scrollRef.current.scrollLeft += event.deltaY;          
             }  
-            if(scrollRef.current.scrollLeft > 0 && scrollRef.current.scrollLeft < 1500){
+            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < width){
             event.preventDefault() 
           }
-
-          }
-
-          
-         
-          
+        }       
         };
     
         const scrollElement = scrollRef.current;
