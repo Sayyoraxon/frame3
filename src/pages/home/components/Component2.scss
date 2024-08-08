@@ -20,13 +20,16 @@
         display: flex;
         width: 100%;
         height: 490px;
-        overflow: scroll;
-        overflow-y: hidden;
+        overflow-x: scroll;
+
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
 
         div {
-            display: flex;
+            position: relative;
             flex-direction: column;
-            max-width: 940px;
+            flex: 0 0 auto;
+            width: 940px;
             height: 490px;
             border-radius: 32px;
             background-color: rgba(72, 134, 69, 0.1);
@@ -34,10 +37,9 @@
             overflow: unset;
 
             p {
-                margin-bottom: -30px;
                 margin-right: auto;
-                width: 820px;
-                padding-right: 640px;
+                margin-left: 0;
+                width: 200px;
                 text-align: left;
                 border-radius: 32px;
                 font-size: 22px;
@@ -47,9 +49,10 @@
                 color: rgba(72, 134, 69, 1);
             }
 
-            img {  
-                margin-left: auto;
-                margin-top: auto;
+            img {
+                position: absolute;
+                bottom: 60px;
+                right: 45px;
             }
         }
 

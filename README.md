@@ -72,3 +72,63 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # frame3
 # frame3
 # frame3
+
+
+
+.scroll {
+        display: flex;
+    flex-direction: column; /* Vertikal flex holati */
+    height: 400px; /* Scroll qilish uchun kerakli balandlik */
+    overflow-y: auto; /* Vertikal skrollni yoqish */
+    overflow-x: hidden; 
+
+        div {
+            display: flex;
+            flex-direction: column;
+            max-width: 940px;
+            height: 490px;
+            border-radius: 32px;
+            background-color: rgba(72, 134, 69, 0.1);
+            padding:  60px 45px;
+            overflow: unset;
+
+            p {
+                margin-bottom: -30px;
+                margin-right: auto;
+                width: 820px;
+                padding-right: 640px;
+                text-align: left;
+                border-radius: 32px;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+                color: rgba(72, 134, 69, 1);
+            }
+
+            img {  
+                margin-left: auto;
+                margin-top: auto;
+            }
+        }
+
+        div:nth-child(1) {
+            background: #F4F6F6;
+            margin-right: 16px;
+
+            p {
+                color: #a6a9a9;
+            }
+        }
+
+        div:nth-child(2) {
+            background-color: rgba(217, 87, 32, 0.1);
+            margin-right: 16px;
+
+            p {
+                color: rgba(217, 87, 32, 1);
+            }
+        }
+
+
+    }# frame3
