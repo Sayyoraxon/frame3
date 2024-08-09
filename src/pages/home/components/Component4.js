@@ -13,12 +13,13 @@ const Component4 = () => {
     useEffect(() => {
         const handleWheel = (event) => {
 
-            const width = scrollRef.current.clientWidth
+            const width = scrollRef.current.offsetWidth
+            console.log(scrollRef)
           if (scrollRef.current) {
             if (event.deltaY !== 0) {
               scrollRef.current.scrollLeft += event.deltaY;          
             }  
-            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < width-400){
+            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft <  1100){
             event.preventDefault() 
           }
         }       

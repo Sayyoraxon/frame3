@@ -11,12 +11,12 @@ const Component2 = () => {
 
     useEffect(() => {
         const handleWheel = (event) => {
-            const width = scrollRef.current.clientWidth
+            console.log(scrollRef)
           if (scrollRef.current) {
             if (event.deltaY !== 0) {
               scrollRef.current.scrollLeft += event.deltaY;          
             }  
-            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < width){
+            if(scrollRef.current.scrollLeft > 0 && scrollRef.current.scrollLeft < 510){
             event.preventDefault() 
           }
         }       
@@ -41,7 +41,7 @@ const Component2 = () => {
             <div className="scroll" ref={scrollRef}>
 
 
-                <div>
+                <div className="one">
                     <p>
                         Charging as easy
                         as USB-C.
@@ -49,7 +49,7 @@ const Component2 = () => {
                     <img src={watch} alt="commandity" />
 
                 </div>
-                <div>
+                <div className="two">
                     <p>
                         Charging as easy
                         as USB-C.

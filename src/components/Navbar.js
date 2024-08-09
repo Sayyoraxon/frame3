@@ -3,15 +3,19 @@ import menu from "../assets/icons/menu.svg"
 import search from "../assets/icons/search.svg"
 import phone from "../assets/icons/phone.svg"
 import arrow from "../assets/icons/vector.svg"
+import heart from "../assets/icons/heart.svg"
+import globe from "../assets/icons/globe.svg"
 
 const Navbar = () => {
     return (
-        <div className='appbar'>
-            <h2>Get it</h2>
+            
             <div className='navbar'>
+                <h2>Get it</h2>
                 <button>
                     <img src={menu} alt="menu" />
-                    Продукты
+                    <p>
+                        Продукты
+                    </p>
                 </button>
                 <div>
                     <img src={search} alt="serch" />
@@ -22,14 +26,21 @@ const Navbar = () => {
                 <a href="#">Контакты</a>
                 <button className='button2'>
                     <img src={phone} alt="phone" />
-                    Позвонить
+                    <img src={heart} alt="heart" className='img1'/>
+                    <p>
+                      Позвонить  
+                    </p>
+                    
                 </button>
                 <button className='btn3'>
-                    Оставить заявку
+                    <p>
+                      Оставить заявку  
+                    </p>
+                    
                     <img src={arrow} alt="arrow" />
+                    <img src={globe} alt="heart" className='img1'/>
                 </button>
             </div>
-        </div>
     )
 }
 

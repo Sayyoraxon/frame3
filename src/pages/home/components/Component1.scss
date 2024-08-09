@@ -1,12 +1,17 @@
 .component1 {
-    max-width: 1120px;
+    width: 1120px;
     margin: 59px auto 0 auto;
     display: flex;
-    justify-content: space-between;
+    overflow-x: scroll;
+
+    @media (max-width: 750px) {
+        margin-top: 80px;
+    };
 
 
     div {
-        margin-left: 7px;
+        display: block;
+        margin-right: 7px;
         position: relative;
         width: 106px;
         height: 120px;
@@ -15,6 +20,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         button{
             width: 40px;
             height: 40px;
@@ -30,5 +36,11 @@
             }
         }
         
+    }
+
+    div:nth-child(1) {
+        @media (max-width: 1120px) {
+            margin-left: 12px;
+        }
     }
 }
