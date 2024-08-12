@@ -12,16 +12,16 @@ const Component2 = ({setScroll}) => {
     useEffect(() => {
         const handleWheel = (event) => {
           const maxScrollLeft = scrollRef.current.scrollWidth - scrollRef.current.clientWidth;
-
+      
           if (scrollRef.current) {
             if (event.deltaY !== 0) {
               scrollRef.current.scrollLeft += event.deltaY;          
             }  
             if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < maxScrollLeft){
             event.preventDefault() 
-            setScroll("hidden")
+            setScroll(true)
           }else {
-            setScroll("scroll")
+            setScroll(false)
           }
         }       
         };

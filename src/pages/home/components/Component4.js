@@ -20,9 +20,9 @@ const Component4 = ({setScroll}) => {
             }  
             if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft <  maxScrollLeft){
             event.preventDefault() 
-            setScroll("hidden")
+            setScroll(true)
           }else{
-            setScroll("scroll")
+            setScroll(false)
           }
         }       
         };
