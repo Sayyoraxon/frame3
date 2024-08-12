@@ -5,7 +5,7 @@ import watch from "../../../assets/img/watch.png"
 import { useEffect, useRef } from "react"
 
 
-const Component2 = () => {
+const Component2 = ({setScroll}) => {
 
     const scrollRef = useRef()
 
@@ -19,6 +19,9 @@ const Component2 = () => {
             }  
             if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < maxScrollLeft){
             event.preventDefault() 
+            setScroll("hidden")
+          }else {
+            setScroll("scroll")
           }
         }       
         };
@@ -35,13 +38,12 @@ const Component2 = () => {
         };
       }, []);
 
+
     
     return (
         <div className='component2'>
             <p>Получи все первым</p>
             <div className="scroll" ref={scrollRef}>
-
-
                 <div className="one">
                     <p>
                         Charging as easy

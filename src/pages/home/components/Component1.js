@@ -7,7 +7,7 @@ import airpods1 from "../../../assets/img/airpods1.png"
 import arrow from "../../../assets/icons/arrow_up.svg"
 import { useEffect, useRef } from "react"
 
-const Component1 = () => {
+const Component1 = ({setScroll}) => {
 
    const scrollRef = useRef()
 
@@ -21,6 +21,9 @@ const Component1 = () => {
            }  
            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < maxScrollLeft){
            event.preventDefault() 
+           setScroll("hidden")
+         }else {
+            setScroll("scroll")
          }
        }       
        };
