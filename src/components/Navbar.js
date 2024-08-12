@@ -7,14 +7,14 @@ import heart from "../assets/icons/heart.svg"
 import globe from "../assets/icons/globe.svg"
 import MobileNavbar from './MobileNavbar'
 
-const Navbar = () => {
+const Navbar = ({open, setOpen}) => {
     return (
         <>
-            <MobileNavbar/>
+            {open && <MobileNavbar setOpen={setOpen}/>}
             <div className='navbar'> 
                 <h2>Get it</h2>
                 <button>
-                    <img src={menu} alt="menu" />
+                    <img src={menu} alt="menu" onClick={()=>setOpen(true)}/>
                     <p>
                         Продукты
                     </p>

@@ -1,10 +1,10 @@
 import "./MobileNavbar.scss"
 import { IoClose } from "react-icons/io5";
 
-const MobileNavbar = () => {
+const MobileNavbar = ({setOpen}) => {
     return (
         <div className="mobileNav">
-            <IoClose />
+            <IoClose onClick={()=>setOpen(false)}/>
             <a href="#">
                 О нас
             </a>
