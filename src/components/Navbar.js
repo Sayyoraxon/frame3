@@ -8,11 +8,15 @@ import globe from "../assets/icons/globe.svg"
 import MobileNavbar from './MobileNavbar'
 
 const Navbar = ({open, setOpen}) => {
+
+
+
+
     return (
         <>
             {open && <MobileNavbar setOpen={setOpen}/>}
             <div className='navbar'> 
-                <h2>Get it</h2>
+                <a href="#home" className='logo'>Get it</a>
                 <button>
                     <img src={menu} alt="menu" onClick={()=>setOpen(true)}/>
                     <p>

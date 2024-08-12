@@ -4,7 +4,7 @@ import watch from "../../../assets/img/watch.png"
 import arrow from "../../../assets/icons/arrow_up.svg"
 import { useEffect, useRef } from "react"
 
-const Component4 = ({setScroll}) => {
+const Component4 = () => {
 
     const scrollRef = useRef()
 
@@ -20,9 +20,6 @@ const Component4 = ({setScroll}) => {
             }  
             if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft <  maxScrollLeft){
             event.preventDefault() 
-            setScroll(true)
-          }else{
-            setScroll(false)
           }
         }       
         };

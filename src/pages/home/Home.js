@@ -10,42 +10,20 @@ import { useEffect, useRef, useState } from "react"
 
 const Home = () => {
 
-  const [scroll, setScroll] = useState(false)
 
-  const scrollRef = useRef()
-
-  useEffect(() => {
-    const handleWheel = (event) => {
-    
-        if (scroll) {
-          const currentScrollTop = scrollRef.current.scrollTop;
-          requestAnimationFrame(() => {
-            scrollRef.current.scrollTop = currentScrollTop;
-          });
-        }
-      
-    };
-
-    const scrollElement = scrollRef.current;
-    if (scrollElement) {
-      scrollElement.addEventListener('wheel', handleWheel, { passive: false });
-    }
-
-    return () => {
-      if (scrollElement) {
-        scrollElement.removeEventListener('wheel', handleWheel);
-      }
-    };
-  }, [scroll]);
-
+   
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // smooth harakati bilan siljitadi
+});
 
 
   return (
-    <div className='home' ref={scrollRef}>
-        <Component1 setScroll={setScroll}/>
-        <Component2 setScroll={setScroll}/>
+    <div className='home'>
+        <Component1 />
+        <Component2 />
         <Component3/>
-        <Component4 setScroll={setScroll}/>
+        <Component4 />
         <Component5/>
         <Component6/>
         <Footer/>

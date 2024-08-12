@@ -5,9 +5,10 @@ import watch from "../../../assets/img/watch.png"
 import { useEffect, useRef } from "react"
 
 
-const Component2 = ({setScroll}) => {
+const Component2 = () => {
 
     const scrollRef = useRef()
+
 
     useEffect(() => {
         const handleWheel = (event) => {
@@ -16,12 +17,9 @@ const Component2 = ({setScroll}) => {
           if (scrollRef.current) {
             if (event.deltaY !== 0) {
               scrollRef.current.scrollLeft += event.deltaY;          
-            }  
+            } 
             if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < maxScrollLeft){
             event.preventDefault() 
-            setScroll(true)
-          }else {
-            setScroll(false)
           }
         }       
         };
@@ -37,6 +35,8 @@ const Component2 = ({setScroll}) => {
           }
         };
       }, []);
+
+        
 
 
     

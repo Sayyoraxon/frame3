@@ -7,7 +7,7 @@ import airpods1 from "../../../assets/img/airpods1.png"
 import arrow from "../../../assets/icons/arrow_up.svg"
 import { useEffect, useRef } from "react"
 
-const Component1 = ({setScroll}) => {
+const Component1 = () => {
 
    const scrollRef = useRef()
 
@@ -20,10 +20,7 @@ const Component1 = ({setScroll}) => {
              scrollRef.current.scrollLeft += event.deltaY;          
            }  
            if(scrollRef.current.scrollLeft !== 0 && scrollRef.current.scrollLeft < maxScrollLeft){
-           event.preventDefault() 
-           setScroll(true)
-         }else {
-            setScroll(false)
+           event.preventDefault()
          }
        }       
        };
@@ -41,7 +38,7 @@ const Component1 = ({setScroll}) => {
      }, []);
 
   return (
-    <div className='component1' ref={scrollRef}>
+    <div className='component1' ref={scrollRef} id="home">
         <div>
            <img src={smartwatch} alt="smartwatch"/>
            <button>
