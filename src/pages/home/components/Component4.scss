@@ -3,6 +3,10 @@
     width: 100%;
     background: #F4F6F6;
 
+    @media (max-width: 850px) {
+        padding: 16px 12px;
+    }
+
     h2 {
         width: 1120px;
         margin: 0;
@@ -15,6 +19,13 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+
+        @media (max-width: 850px){
+            width: 100%;
+            font-size: 18px;
+            line-height: 21px;
+            padding-top: 16px;
+        }
     }
 
 
@@ -25,6 +36,10 @@
         display: flex;
         flex-direction: row;
         overflow-x: scroll;
+
+        @media (max-width: 850px) {
+            margin-top: 24px;
+        }
 
         div {
             position: relative;
@@ -39,6 +54,12 @@
             background: #FFF;
             overflow-x: unset;
 
+            @media (max-width: 850px) {
+                width: 235px;
+                height: 397px;
+                padding: 37px 10px 10px 30px;
+            }
+
             p:nth-child(1) {
                 margin: 0;
                 margin-top: 38px;
@@ -47,6 +68,11 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+
+                @media (max-width: 850px) {
+                    margin-top: 0;
+                    font-size: 11px;
+                }
             }
 
             p:nth-child(2) {
@@ -57,6 +83,10 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+
+                @media (max-width: 850px) {
+                    font-size: 16px;
+                }
             }
 
             p:nth-child(3) {
@@ -66,11 +96,22 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+
+                @media (max-width: 850px) {
+                    font-size: 12px;
+                    margin-top: 22px;
+                }
             }
 
             img {
                 width: 240px;
                 margin-top: auto;
+
+                @media (max-width: 850px) {
+                   width: 185px;
+                   height: 212px;
+                   object-fit: contain; 
+                }
             }
 
             button {
@@ -92,6 +133,10 @@
 
         div:nth-child(1) {
             margin-left: 12%;
+
+            @media (max-width: 1120px){
+                margin-left: 0;
+            }
         }
     }
 }

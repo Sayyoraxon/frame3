@@ -4,12 +4,17 @@
     display: flex;
     overflow-x: scroll;
 
+    @media (max-width: 1120px) {
+        width: 100%
+    }
+
     @media (max-width: 750px) {
         margin-top: 80px;
     };
 
 
     div {
+        padding: 19px;
         display: block;
         margin-right: 7px;
         position: relative;
@@ -20,6 +25,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow-x: unset;
+
+        img {
+            width: 68px;
+            height: 77px;
+            object-fit: contain;
+        }
 
         button{
             width: 40px;

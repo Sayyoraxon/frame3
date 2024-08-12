@@ -5,11 +5,13 @@ import phone from "../assets/icons/phone.svg"
 import arrow from "../assets/icons/vector.svg"
 import heart from "../assets/icons/heart.svg"
 import globe from "../assets/icons/globe.svg"
+import MobileNavbar from './MobileNavbar'
 
 const Navbar = () => {
     return (
-            
-            <div className='navbar'>
+        <>
+            <MobileNavbar/>
+            <div className='navbar'> 
                 <h2>Get it</h2>
                 <button>
                     <img src={menu} alt="menu" />
@@ -41,6 +43,7 @@ const Navbar = () => {
                     <img src={globe} alt="heart" className='img1'/>
                 </button>
             </div>
+            </>
     )
 }
 

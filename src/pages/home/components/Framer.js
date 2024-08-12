@@ -3,15 +3,20 @@ import { motion } from "framer-motion";
 import move from "lodash-move";
 import playmarket from "../../../assets/img/playmarket.svg"
 import appstore from "../../../assets/img/appstore.svg"
+import useWindowDimensions from "../../../useWindowDimensions";
 
 
 
 
 
-const CARD_OFFSET = 73;
 
 
 const Framer = ({ CARD_COLORS, title }) => {
+
+    const {width} = useWindowDimensions()
+
+
+    const CARD_OFFSET = width===1120 ? 73 : 50;
 
     const [cards, setCards] = React.useState(CARD_COLORS);
     const moveToEnd = from => {
@@ -50,7 +55,7 @@ const Framer = ({ CARD_COLORS, title }) => {
                                 {color.title && <h3 className="titleStyle">
                                     {color.title}
                                 </h3>}
-                                {color.img && <img src={color.img} alt="img" height="252px"/>}
+                                {color.img && <img src={color.img} alt="img" className="img2"/>}
                                 {
                                     color.title === "Экономте время" &&
                                     <div className="absStyle">
@@ -67,12 +72,5 @@ const Framer = ({ CARD_COLORS, title }) => {
     )
 }
 
-const wrapperStyle = {
-    height: "694px",
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-};
 
 export default Framer

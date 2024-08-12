@@ -65,17 +65,23 @@ const Footer = () => {
                             с учетом условий использования.
                         </p>
                     </div>
-                    <div>
+                    <div id="flex">
                         <div>
                             <PiTelegramLogoLight />
                             <SlSocialFacebook />
                             <FaInstagram />
                             <FiTwitter />
                         </div>
-                        <p>Наш телефон:</p>
-                        <p>+998 90 000-00-00</p>
-                        <p>Электронная почта:</p>
-                        <p>info@gmail.com</p>
+                        <div>
+                            <p>Наш телефон:</p>
+                            <p>+998 90 000-00-00</p> 
+                        </div>
+                           
+                        <div>
+                            <p>Электронная почта:</p>
+                            <p>info@gmail.com</p>
+                        </div>
+                        
                     </div>
                 </div>
                 <hr />

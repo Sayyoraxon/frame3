@@ -5,8 +5,12 @@
     width: 100%;
     background-color: #f4f6f6;
 
+    @media (max-width: 1120px) {
+        padding : 0 12px;
+    }
+
     .footer {
-        width: 1070px;
+        max-width: 1070px;
         margin-right: auto;
         margin-left: auto;
         padding: 45px 0 30px 0;
@@ -14,11 +18,16 @@
         div:nth-child(1) {
             width: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
 
+          
+
             div {
+                margin-bottom: 8px;
                 width: 350px;
                 height: 212px;
+                flex-grow: 1;
                 border-radius: 16px;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -27,6 +36,14 @@
             div:nth-child(1) {
                 background-color: #fff;
                 padding-left: 30px;
+
+                @media (max-width: 1170px) {
+                    margin-right: 8px;
+                }
+
+                @media (max-width: 750px) {
+                    margin-right: 0;
+                }
 
                 h3 {
                     margin: 20px 0 8px 0;
@@ -57,6 +74,11 @@
             div:nth-child(2) {
                 padding-left: 31px;
                 background-color: #fff;
+                flex-grow: 1;
+
+                @media (max-width: 750px) {
+                    width: 100%;
+                }
 
                 div {
                     width: 100%;
@@ -101,17 +123,32 @@
             }
         }
 
-        div:nth-child(3) {
+        #flex {
             width: 255px;
             padding-left: 21px;
+            flex-grow: 1;
+
+            @media (max-width: 1000px) {
+                padding-left: 0;
+                display: flex;
+                flex-direction: row;
+                height: auto;
+            }
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+            }
+            
 
             div:nth-child(1) {
                 padding-left: 0;
                 background-color: #f4f6f6;
                 display: flex;
                 flex-direction: row;
+                flex-wrap: nowrap;
                 width: 100%;
                 height: auto;
+
 
                 svg {
                     padding: 20px;
@@ -123,32 +160,37 @@
                 }
             }
 
-            p {
-                margin: 0;
-                margin-top: 35px;
-                padding-left: 22px;
-                color: #131313;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
+            div:nth-child(2),
+            div:nth-child(3) {
+                padding-left: 0;
+                background-color: #f4f6f6;
+                width: 100%;
+                height: auto;
+
+                p {
+                    margin: 0;
+                    margin-top: 35px;
+                    padding-left: 22px;
+                    color: #131313;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                p:nth-child(2) {
+                    margin-top: 3px;
+                    font-size: 14px;
+                }
+    
+                p:nth-child(1) {
+                    margin-top: 19px;
+                }
             }
 
-            p:nth-child(3) {
-                margin-top: 3px;
-                font-size: 14px;
-            }
-
-            p:nth-child(4) {
-                margin-top: 19px;
-            }
-
-            p:nth-child(5) {
-                margin-top: 3px;
-                font-size: 14px;
-            }
 
         }
+
 
         hr {
             margin-top: 40px;
@@ -156,17 +198,23 @@
             border: none;
             height: 1px;
             background-color: #e4e4e4;
+
+            @media (max-width: 1000px) {
+                margin-top: 0;
+            }
         }
 
         #subfooter {
+            width: 100%;
             padding-left: 0;
             display: flex;
             flex-direction: row;
 
             #a {
-                padding-left: 0;
-                padding-right: 20px;
+                display: block;
+                padding: 0;
                 margin: 0;
+                margin-right: 20px;
                 color: #131313;
                 font-size: 12px;
                 font-style: normal;
